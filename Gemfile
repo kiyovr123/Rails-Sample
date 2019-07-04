@@ -10,8 +10,8 @@ end
 gem 'rails', '~> 5.0.3'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
- gem 'sqlite3', '1.3.13'
 # Use SCSS for stylesheets
+gem 'sqlite3', '~> 1.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :development, :test do
+  gem 'sqlite3', '1.3.13'
+  gem 'byebug',  '9.0.6', platform: :mri
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
